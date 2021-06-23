@@ -11,9 +11,7 @@ function App() {
   const [show, setShow] = useState(false);
   return (
     <div className="App">
-      <button onClick={() => setShow(!show)}>{show ? "true" : "false"}</button>
-      {show && <CounterUseEffect />}
-
+      <Counter />
     </div>
   );
 }
