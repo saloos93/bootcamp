@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
+
+const useChangeDocumentTitle = (_count) => {
+  useEffect(() => {
+    document.title = `clicked: ${_count}`;
+  }, [_count]);
+};
+
 const Counter = () => {
   let [count, setCount] = useState(0);
 
   const add = () => setCount(count + 1);
   const minus = () => setCount(count - 1);
-  useEffect(() => {
-    document.title = `clicked: ${count}`;
-  }, [count]);
-
+  useChangeDocumentTitle(count);
   return (
     <>
       <button onClick={add}>+</button>
