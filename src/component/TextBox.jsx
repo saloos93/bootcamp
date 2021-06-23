@@ -4,11 +4,8 @@ export default function TextBox() {
   const [number, setNumber] = useState(0);
   return (
     <div>
-      <input
-        value={number}
-        type="number"
-        onChange={() => setNumber(number)}
-      ></input>
+      number:{number % 2 == 0 ? "Even" : "Odd"}
+      <input type="number" onChange={(e) => setNumber(e.target.value)}></input>
     </div>
   );
 }

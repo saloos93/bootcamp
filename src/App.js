@@ -6,6 +6,7 @@ import Todo from "./component/Todo";
 import CounterMain from "./component/CounterMain.jsx";
 import PeopleList from "./component/PeopleList.jsx";
 import CounterUseEffect from "./component/CounterUseEffect.jsx";
+import TextBox from "./component/TextBox";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -13,6 +14,8 @@ function App() {
     <div className="App">
       <button onClick={() => setShow(!show)}>{show ? "true" : "false"}</button>
       {show && <CounterUseEffect />}
+
+      <TextBox />
 
     </div>
   );
